@@ -1,0 +1,24 @@
+{
+  "name": "js-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run ./main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeCoutinho/teste.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeCoutinho/teste/issues"
+  },
+  "homepage": "https://github.com/FelipeCoutinho/teste#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

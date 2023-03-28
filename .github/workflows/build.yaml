@@ -1,5 +1,5 @@
 name: Render
-on: [pull_request]:
+on: [push]:
 jobs:
   deploy:
     name: Wait for Deploy
@@ -10,7 +10,6 @@ jobs:
         with:
           render-token: rnd_7On3sUgyUMwMgxfJEokh89opfIKJ
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          service-id: srv-xxxxxxxxxxxxxxxxxxxx
           retries: 20
           wait: 16000
           sleep: 30000

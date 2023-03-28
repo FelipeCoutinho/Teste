@@ -1,13 +1,16 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Render
+on: [pull_request]:
 jobs:
-  check-bats-version:
+  deploy:
+    name: Wait for Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Wait for Render Deployment
+        uses: bounceapp/render-action@0.6.0
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          render-token: rnd_7On3sUgyUMwMgxfJEokh89opfIKJ
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          service-id: srv-xxxxxxxxxxxxxxxxxxxx
+          retries: 20
+          wait: 16000
+          sleep: 30000

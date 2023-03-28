@@ -1,5 +1,9 @@
 name: Render
-on: [push]:
+on:
+  push:
+    branches:
+      - main
+      - dev
 jobs:
   deploy:
     name: Wait for Deploy

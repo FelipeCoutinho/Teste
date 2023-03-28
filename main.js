@@ -6,5 +6,5 @@ app.listen(3000,() => {
 })
 
 app.get('/teste', (req, res) => {
-  return res.status(200).send('olá felipe')
+  return res.status(200).send('deploy deu certo!')
 })
